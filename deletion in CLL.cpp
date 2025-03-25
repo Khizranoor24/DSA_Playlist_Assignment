@@ -15,7 +15,7 @@ public:
         head = NULL;
     }
 
-    // Function to insert a node at the end
+    
     void insert(int value) {
         Node* newNode = new Node();
         newNode->data = value;
@@ -32,13 +32,13 @@ public:
         }
     }
 
-    // Function to delete a node from the beginning
+   
     void deleteFromBeginning() {
         if (head == NULL) {
             cout << "List is empty.\n";
             return;
         }
-        if (head->next == head) {  // Only one node
+        if (head->next == head) {  
             delete head;
             head = NULL;
             return;
@@ -55,7 +55,7 @@ public:
         delete temp;
     }
 
-    // Function to display the circular linked list
+  
     void display() {
         if (head == NULL) {
             cout << "List is empty.\n";
@@ -73,20 +73,19 @@ public:
 int main() {
     CircularLinkedList cll;
 
-    // Insert elements into the circular linked list
+    
     cll.insert(10);
     cll.insert(20);
     cll.insert(30);
     cll.insert(40);
 
-    // Display the list before deletion
+   
     cout << "Original List: ";
     cll.display();
 
-    // Perform deletion from the beginning
-    cll.deleteFromBeginning();
+   cll.deleteFromBeginning();
 
-    // Display the list after deletion
+  
     cout << "After deleting first node: ";
     cll.display();
 
